@@ -1,0 +1,136 @@
+body {
+    font-family: 'Fredericka the Great', sans-serif; /* Cambiar a Fredericka the Great para el cuerpo */
+    background-color: #0d0d0d;
+    background-image: url('fondo-halloween.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    animation: parpadeo 2s infinite alternate;
+}
+
+h1, h2, .parada-info {
+    font-family: 'Creepster', cursive; /* Mantener Creepster para títulos y parada */
+}
+
+@keyframes parpadeo {
+    0% { text-shadow: 0 0 5px #ff7518, 0 0 10px #ff7518, 0 0 20px #ff7518, 0 0 40px #e64a19; }
+    80% { text-shadow: none; }
+}
+
+h1 {
+    color: #ff7518;
+    font-size: 3em;
+    margin: 10px 0;
+    text-shadow: 5px 8px 6px #000000;
+    animation: sombreado-fantasma 4s infinite;
+}
+
+@keyframes sombreado-fantasma {
+    0% {
+        text-shadow: 0 0 10px #ff7518, 0 0 20px #ff7518, 0 0 40px #e64a19;
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        text-shadow: 0 0 50px #e64a19, 0 0 100px #ff7518, 0 0 200px #ff7518;
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    80% {
+        text-shadow: 0 0 10px #ff7518, 0 0 20px #ff7518, 0 0 40px #e64a19;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h2 {
+    color: #ffb74d;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 6px #000000;
+}
+
+.juego-info {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ff7518;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
+    background-color: #373940e6;
+    box-shadow: 0 4px 10px #00000099;
+    color: #f5f5f5;
+}
+
+.juego-info p {
+    text-shadow: 1px 1px 3px #000000;
+    font-size: 1.2em; /* Aumentar tamaño de fuente */
+    line-height: 1.5; /* Aumentar espaciado entre líneas */
+    margin: 10px 0; /* Espaciado adicional entre párrafos */
+}
+
+
+.qr-code {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px #00000099;
+    border: 5px solid #ff7518;
+}
+
+.qr-code img {
+    width: 100%;
+    height: auto;
+}
+
+.parada-info {
+    margin-top: 20px;
+    font-size: 1.4em;
+    text-shadow: 2px 2px 5px #000000;
+    color: #e0e0e0;
+}
+
+.siguiente-parada {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ff7518;
+    color: white;
+    border: 2px solid #e64a19;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px #00000099;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.siguiente-parada:hover {
+    background-color: #d84315;
+    transform: scale(1.05);
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .juego-info {
+        width: 60%;
+    }
+
+    .qr-code {
+        max-width: 300px;
+    }
+
+    .siguiente-parada {
+        font-size: 1.3em;
+    }
+}
