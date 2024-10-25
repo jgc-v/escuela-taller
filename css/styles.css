@@ -84,6 +84,11 @@ img, video {
     background-color: #c82333;
 }
 
+.hidden {
+    display: none;
+}
+
+
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
     h1 {
