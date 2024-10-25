@@ -1,5 +1,5 @@
 body {
-    font-family: 'Fredericka the Great', sans-serif; /* Cambiar a Fredericka the Great para el cuerpo */
+    font-family: 'Fredericka the Great', sans-serif;
     background-color: #0d0d0d;
     background-image: url('fondo-halloween.jpg');
     background-size: cover;
@@ -11,20 +11,9 @@ body {
     animation: parpadeo 2s infinite alternate;
 }
 
-/*
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f9;
-}
-*/
 h1, h2, .parada-info {
-    font-family: 'Creepster', cursive; /* Mantener Creepster para títulos y parada */
+    font-family: 'Creepster', cursive;
 }
-
 
 @keyframes parpadeo {
     0% { text-shadow: 0 0 5px #ff7518, 0 0 10px #ff7518, 0 0 20px #ff7518, 0 0 40px #e64a19; }
@@ -79,9 +68,9 @@ h2 {
 
 .juego-info p {
     text-shadow: 1px 1px 3px #000000;
-    font-size: 1.2em; /* Aumentar tamaño de fuente */
-    line-height: 1.5; /* Aumentar espaciado entre líneas */
-    margin: 10px 0; /* Espaciado adicional entre párrafos */
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 10px 0;
 }
 
 .parada-info {
@@ -116,35 +105,23 @@ button:hover {
 }
 
 #videoContainer {
-   margin-top: 20px;
-    /* width: 56.25vh;  
-    height: 100vh;  
-    background-color: black; 
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
+    margin-top: 20px;
 }
 
 #imageContainer {
     margin-top: 20px;
 }
 
-
-/*tamaño foto*/
 img {
     width: 100%;
-    
     height: auto;
 }
 
-/*tamaño vídeo*/
 video {
-    width: 100%;  /* Ajustar el video al ancho del contenedor */
-    height: 100%; /* Ajustar el video a la altura del contenedor */
-    object-fit: cover;  /* Asegurar que el video cubra el contenedor manteniendo la proporción */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
-
-/*botón volver a inicio*/
 
 #closeImageButton {
     display: block;
@@ -158,4 +135,38 @@ video {
 
 #closeImageButton:hover {
     background-color: #c82333;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .juego-info {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .juego-info p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    #closeImageButton {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
 }
