@@ -1,60 +1,98 @@
 body {
     font-family: 'Fredericka the Great', sans-serif;
-    color: #fff;
     background-color: #0d0d0d;
+    background-image: url('fondo-halloween.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
     text-align: center;
-    margin: 0;
     padding: 10px;
+    margin: 0;
+    animation: parpadeo 2s infinite alternate;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+h1, h2, .parada-info {
+    font-family: 'Creepster', cursive;
+}
+
+@keyframes parpadeo {
+    0% { text-shadow: 0 0 5px #ff7518, 0 0 10px #ff7518, 0 0 20px #ff7518, 0 0 40px #e64a19; }
+    80% { text-shadow: none; }
 }
 
 h1 {
     color: #ff7518;
-    font-size: 2.5em;
-    margin: 20px 0;
-    text-shadow: 5px 8px 6px #000;
+    font-size: 3em;
+    margin: 15px 0 1px 0;
+    text-shadow: 5px 8px 6px #000000;
+    animation: sombreado-fantasma 4s infinite;
+}
+
+@keyframes sombreado-fantasma {
+    0% {
+        text-shadow: 0 0 10px #ff7518, 0 0 20px #ff7518, 0 0 40px #e64a19;
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        text-shadow: 0 0 50px #e64a19, 0 0 100px #ff7518, 0 0 200px #ff7518;
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    80% {
+        text-shadow: 0 0 10px #ff7518, 0 0 20px #ff7518, 0 0 40px #e64a19;
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 h2 {
     color: #ffb74d;
     font-size: 2em;
     margin-bottom: 20px;
+    text-shadow: 4px 4px 6px #000000;
 }
 
 .juego-info {
-    background-color: #373940e6;
+    margin: 20px auto;
+    padding: 20px;
     border: 2px solid #ff7518;
     border-radius: 10px;
-    color: #f5f5f5;
-    margin: 20px auto;
-    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
+    background-color: #373940e6;
     box-shadow: 0 4px 10px #00000099;
-    max-width: 90%;
+    color: #f5f5f5;
+}
+
+.juego-info p {
+    text-shadow: 1px 1px 3px #000000;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 10px 0;
 }
 
 .parada-info {
-    font-size: 1.3em;
-    color: #e0e0e0;
-    text-shadow: 2px 2px 5px #000;
     margin-top: 30px;
+    font-size: 1.4em;
+    text-shadow: 2px 2px 5px #000000;
+    color: #e0e0e0;
 }
 
 button {
+    font-family: 'Fredericka the Great', sans-serif;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 15px 30px;
     background-color: #ff7518;
     color: white;
     border: 2px solid #e64a19;
     border-radius: 8px;
-    padding: 15px 30px;
+    text-decoration: none;
     font-size: 1.2em;
     box-shadow: 0 4px 10px #00000099;
-    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 15px;
 }
 
 button:hover {
@@ -62,35 +100,49 @@ button:hover {
     transform: scale(1.05);
 }
 
-#videoContainer, #imageContainer {
+.hidden {
+    display: none;
+}
+
+#videoContainer {
     margin-top: 20px;
 }
 
-img, video {
+#imageContainer {
+    margin-top: 20px;
+}
+
+img {
     width: 100%;
     height: auto;
 }
 
+video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 #closeImageButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
     background-color: #dc3545;
     color: white;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 #closeImageButton:hover {
     background-color: #c82333;
 }
 
-.hidden {
-    display: none;
-}
-
-
-/* Media queries para dispositivos móviles */
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
     h1 {
         font-size: 2em;
     }
@@ -100,21 +152,21 @@ img, video {
     }
 
     .juego-info {
-        padding: 10px;
+        padding: 15px;
         font-size: 1em;
     }
 
-    .parada-info {
-        font-size: 1.2em;
+    .juego-info p {
+        font-size: 1em;
     }
 
-    button, #closeImageButton {
+    button {
         padding: 10px 20px;
         font-size: 1em;
     }
 
-    #videoContainer video {
-        width: 100%;
-        height: auto;
+    #closeImageButton {
+        padding: 8px 16px;
+        font-size: 0.9em;
     }
 }

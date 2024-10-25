@@ -41,9 +41,3 @@ closeImageButton.addEventListener('click', () => {
     playVideoButton.classList.remove('hidden');  // Volver a mostrar el botón de abrir video
 });
 
-document.getElementById("playVideoButton").addEventListener("click", function() {
-    // Mostrar el contenedor del video al hacer clic en el botón
-    document.getElementById("videoContainer").classList.remove("hidden");
-    // Opcional: Iniciar la reproducción del video automáticamente
-    document.getElementById("video").play();
-});
