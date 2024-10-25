@@ -40,4 +40,3 @@ closeImageButton.addEventListener('click', () => {
     content.classList.remove('hidden');  // Mostrar de nuevo el contenido inicial (título y párrafo)
     playVideoButton.classList.remove('hidden');  // Volver a mostrar el botón de abrir video
 });
-
