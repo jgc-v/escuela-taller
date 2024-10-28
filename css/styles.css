@@ -171,3 +171,9 @@ video {
 #closeImageButton2:hover {
     background-color: #d84315;
 }
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
