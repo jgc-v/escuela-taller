@@ -161,12 +161,13 @@ video {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #dc3545;
+    background-color: #ff7518;
     color: white;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid #e64a19;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
 #closeImageButton2:hover {
-    background-color: #c82333;
+    background-color: #d84315;
 }
