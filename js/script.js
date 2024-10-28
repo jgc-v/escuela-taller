@@ -19,7 +19,6 @@ playVideoButton.addEventListener('click', () => {
 video.addEventListener('ended', () => {
     videoContainer.classList.add('hidden');  // Ocultar el video cuando termina
     imageButtonContainer.classList.remove('hidden');  // Mostrar el botón para ver la imagen
-    showImageButton.focus();  // Enfocar el botón "PISTA"
 });
 
 // Al hacer clic en el botón para mostrar la imagen
