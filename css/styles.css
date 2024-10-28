@@ -177,3 +177,25 @@ a{
     color: inherit;
 }
 
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3em; /* Ajustar tamaño del encabezado */
+    }
+    
+    h2 {
+        font-size: 2em; /* Ajustar tamaño del subencabezado */
+    }
+    
+    .juego-info p {
+        font-size: 1.6em; /* Ajustar tamaño de fuente para párrafos */
+    }
+
+    button {
+        padding: 15px 30px; /* Ajustar padding de botones */
+        font-size: 1.2em; /* Ajustar tamaño de fuente de botones */
+    }
+
+    .parada-info {
+        font-size: 1.4em; /* Ajustar tamaño de texto */
+    }
+}
