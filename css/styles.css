@@ -157,7 +157,7 @@ video {
 
 /*botón volver a inicio*/
 
-#closeImageButton {
+#closeImageButton2 {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -167,6 +167,6 @@ video {
     border-radius: 5px;
 }
 
-#closeImageButton:hover {
+#closeImageButton2:hover {
     background-color: #c82333;
 }
